@@ -1,0 +1,19 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-primary.mb-4
+  .container
+    a.navbar-brand(href="/") Sistema CRUD
+    button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarNav")
+      span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav.ms-auto
+        if user
+          li.nav-item
+            a.nav-link(href="/users") Usuários
+          li.nav-item
+            a.nav-link(href="/products") Produtos
+          li.nav-item
+            a.nav-link(href="/logout") Sair
+        else
+          li.nav-item
+            a.nav-link(href="/login") Login
+          li.nav-item
+            a.nav-link(href="/register") Registrar
